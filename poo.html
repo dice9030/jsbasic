@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>POO</h1>
+
+	<p id="saludo1"></p>
+	<p id="saludo2"></p>
+
+	<button onclick="mifuncion1()" >Salido 1</button>
+	<button onclick="mifuncion2()" >Salido 2</button>
+</body>
+
+<script>
+	
+	function persona(nombre,edad,ciudad,email){
+
+		//sentenciamos los atributos de la clase persona con los parametros
+		this.nombre=nombre;
+		this.edad=edad;
+		this.ciudad=ciudad;
+		this.email=email;
+
+		//medoto saludar() propio de la clase persona
+		this.saludar=function(){
+			document.getElementById("saludo1").innerHTML="Hola mi nombre es Diego";
+		};
+	}
+
+	var Persona = new persona("Diego Celis","25","Cartagena","dice@gmail.com");
+	
+	function mifuncion1(argument){
+		Persona.saludar();
+	}	
+	function mifuncion2(argument){
+		document.getElementById("saludo2").innerHTML="Soy de" + Persona.ciudad + " y mi Email es" + Persona.email;
+	}
+</script>
+</html>

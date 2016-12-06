@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Poo Ejercicio</h1>
+<p id="mensaje"></p>
+<button onclick="miFuncion()" >Promedio</button>
+</body>
+
+<script>
+	function Estudiante(codigo,nombre,nota1,nota2){
+		this.codigo=codigo;
+		this.nombre=nombre;
+		this.nota1=nota1;
+		this.nota2=nota2;
+		
+		this.promedio = function(){
+
+
+			a = ((this.nota2 + this.nota2)/2);
+
+			var alumno = "";
+
+			alumno+="Codigo: " + this.codigo +"<br>";
+			alumno+="Nombre: " + this.nombre +"<br>";
+			alumno+="Nota 1: " + this.nota1 +"<br>";
+			alumno+="Nota 2: " + this.nota2 +"<br>";
+			alumno+="Promedio: " + a.toPrecision() +"<br>";
+
+			document.getElementById("mensaje").innerHTML=alumno;
+		};		
+	}
+
+	var estudiante = new Estudiante("001","Diego",17,18);
+
+	function miFuncion(){
+		estudiante.promedio();
+	}
+
+
+</script>
+</html>

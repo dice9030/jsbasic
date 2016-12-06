@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Object 1</h1>
+	<p id="c1"></p>
+	<p id="r1"></p>
+	<p id="d1"></p>
+	<p id="c2"></p>
+	<p id="r2"></p>
+	<p id="d2"></p>
+	<p id="c3"></p>
+	<p id="r3"></p>
+	<p id="d3"></p>
+
+</body>
+<script>
+	computador1 = {codigo:"C001",ram:"1024GB",discoduro:"LG"};
+
+	computador2 = new Object();
+	computador2.codigo= "C002";
+	computador2.ram="2048GB";
+	computador2.discoduro="SONY";
+
+	function computador3 (codigo,ram,discoduro){
+		this.codigo=codigo;
+		this.ram=ram;
+		this.discoduro=discoduro;
+	}
+
+	var computador3 = new computador3("C003","3GB","DC");
+
+	document.getElementById("c1").innerHTML=computador1.codigo;
+	document.getElementById("r1").innerHTML=computador1.ram;
+	document.getElementById("d1").innerHTML=computador1.discoduro;
+	document.getElementById("c2").innerHTML=computador2.codigo;
+	document.getElementById("r2").innerHTML=computador2.ram;
+	document.getElementById("d2").innerHTML=computador2.discoduro;
+	document.getElementById("c3").innerHTML=computador3.codigo;
+	document.getElementById("r3").innerHTML=computador3.ram;
+	document.getElementById("d3").innerHTML=computador3.discoduro;
+	
+</script>
+
+</html>

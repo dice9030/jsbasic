@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h1>Finally</h1>
+		<p id="mensaje"></p>
+		<button onclick="mifuncion1()">Ejecutar funcion 1</button>
+</body>
+
+<script>
+	function mifuncion1() {
+		try{
+			var edad = 60;
+			calcular(edad);
+		}catch(error){
+			alert("Existe un error" + " - " + error.message);
+		}finally{
+			document.getElementById("mensaje").innerHTML= "Igual se finalizo";
+		}
+	}
+</script>
+</html>

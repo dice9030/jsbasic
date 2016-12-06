@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Object1</h1>
+	<p id="p1"></p>
+	<p id="m1"></p>
+	<p id="o1"></p>
+	<h1>Object2</h1>
+	<p id="p2"></p>
+	<p id="m2"></p>
+	<p id="o2"></p>
+	<h1>Object3</h1>
+	<p id="p3"></p>
+	<p id="m3"></p>
+	<p id="o3"></p>
+</body>
+<script>
+	
+	var vehiculo1 = {placa:"FR1343",marca:"Toyota",modelo:4000};
+
+	var vehiculo2 = new Object();
+	vehiculo2.placa="FRSA32";
+	vehiculo2.marca="Kia";
+	vehiculo2.modelo=5000;
+
+	function vehiculo3(placa,marca,modelo){
+		this.placa=placa;
+		this.marca=marca;
+		this.modelo=modelo;
+	}
+
+	var vehiculo3 = new vehiculo3("FTR333","Hyunadai",8000);
+
+	document.getElementById("p1").innerHTML=vehiculo1.placa;
+	document.getElementById("m1").innerHTML=vehiculo1.marca;
+	document.getElementById("o1").innerHTML=vehiculo1.modelo;
+	document.getElementById("p2").innerHTML=vehiculo2.placa;
+	document.getElementById("m2").innerHTML=vehiculo2.marca;
+	document.getElementById("o2").innerHTML=vehiculo2.modelo;
+	document.getElementById("p3").innerHTML=vehiculo3.placa;
+	document.getElementById("m3").innerHTML=vehiculo3.marca;
+	document.getElementById("o3").innerHTML=vehiculo3.modelo;
+	
+
+
+</script>
+</html>

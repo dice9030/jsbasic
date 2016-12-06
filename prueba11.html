@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>tarea</h1>
+	<p id="result"></p>
+	<p id="division"></p>
+	<p id="e1"></p>
+	<p id="e2"></p>
+	<p id="e3"></p>
+	<p id="e4"></p>
+	<p id="e5"></p>
+
+	<p id="n1"></p>
+	<p id="n2"></p>
+	<p id="n3"></p>
+	<p id="n4"></p>
+	<p id="n5"></p>
+
+	<p id="b1"></p>
+	<p id="b2"></p>
+	<p id="b3"></p>
+	<p id="b4"></p>
+	<p id="b5"></p>
+
+	<p id="t1"></p>
+	<p id="t2"></p>
+	<p id="t3"></p>
+	<p id="t4"></p>
+	<p id="t5"></p>
+
+	<p id="m1"></p>
+	<p id="m2"></p>
+	<p id="m3"></p>
+	<p id="m4"></p>
+	<p id="m5"></p>
+
+</body>
+<script>
+var numero=43;
+
+	Number.prototype.metodoMultiplicacion = function(){
+		return this*10;
+	}
+	var n = 20;
+
+	document.getElementById("result").innerHTML=n.metodoMultiplicacion();
+
+	Number.prototype.metodoDivision = function(){
+		return this/2;
+	}
+
+	var a = 100;
+
+	document.getElementById("division").innerHTML= a.metodoDivision();
+
+	var m = {a:0.5656,b:22.786,c:145.7980,d:3.146,e:345.895}
+	document.getElementById("e1").innerHTML=m.a.toExponential();
+	document.getElementById("e2").innerHTML=m.b.toExponential();
+	document.getElementById("e3").innerHTML=m.c.toExponential();
+	document.getElementById("e4").innerHTML=m.d.toExponential();
+	document.getElementById("e5").innerHTML=m.e.toExponential();
+
+
+	var a1 =23.4565;
+	var a2 =0.786893;
+	var a3 =1.7980;
+	var a4 =3.2379976;
+	var a5 =235.908673;
+
+	document.getElementById("n1").innerHTML=a1.toFixed(3);
+	document.getElementById("n2").innerHTML=a2.toFixed(3);
+	document.getElementById("n3").innerHTML=a3.toFixed(3);
+	document.getElementById("n4").innerHTML=a4.toFixed(3);
+	document.getElementById("n5").innerHTML=a5.toFixed(3);
+
+
+	var b1 =12.6477;
+	var b2 =0.23576;
+	var b3 =5.0896;
+	var b4 =4.23435;
+	var b5 =235.3457778;
+
+	document.getElementById("b1").innerHTML=b1.toPrecision(2);
+	document.getElementById("b2").innerHTML=b2.toPrecision(2);
+	document.getElementById("b3").innerHTML=b3.toPrecision(2);
+	document.getElementById("b4").innerHTML=b4.toPrecision(2);
+	document.getElementById("b5").innerHTML=b5.toPrecision(2);
+
+	var t1 = "TODOS DESEAMOS LLEGAR A VIEJOS Y TODOS NEGAMOS QUE HEMOS LLEGADO";
+	var t2 = "QUIEN NO ES DUEÑO DE SU PENSAMIENTO NO ES DUEÑO DE SUS ACTOS";
+	var t3 = "DOS EXCESOS: EXCLUIR LA RAZÓN, NO ADMITIR MÁS QUE LA RAZÓN";
+	var t4 = "PIENSO, LUEGO EXISTO";
+	var t5 = "HAZ DE TU VIDA UN SUEÑO, Y DE TU SUEÑO UNA REALIDAD";
+
+	document.getElementById("t1").innerHTML=t1.toLowerCase();
+	document.getElementById("t2").innerHTML=t2.toLowerCase();
+	document.getElementById("t3").innerHTML=t3.toLowerCase();
+	document.getElementById("t4").innerHTML=t4.toLowerCase();
+	document.getElementById("t5").innerHTML=t5.toLowerCase();
+
+	var m1 ="La necesidad de tener razón: señal de espíritu vulgar";
+	var m2 ="La mentira engaña solamente al que la dice";
+	var m3 ="Se puede admitir la fuerza bruta, pero la razón bruta es insoportable";
+	var m4 ="Pensamientos tontos los tenemos todos, pero el sabio se los calla";
+	var m5 ="Saber y saberlo demostrar, es valer dos veces";
+
+	document.getElementById("m1").innerHTML=m1.toUpperCase();
+	document.getElementById("m2").innerHTML=m2.toUpperCase();
+	document.getElementById("m3").innerHTML=m3.toUpperCase();
+	document.getElementById("m4").innerHTML=m4.toUpperCase();
+	document.getElementById("m5").innerHTML=m5.toUpperCase();
+
+
+
+</script>
+</html>

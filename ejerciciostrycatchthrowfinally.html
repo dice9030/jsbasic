@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Ejercicio</h1>
+	<button onclick="mifuncion()">Ver mensaje</button>
+	<button onclick="mifuncion2()">Ver mensaje throw</button>
+	<button onclick="mifuncion3()">Ver mensaje throw</button>
+	<p id="mensaje"></p>
+
+</body>
+<script>
+	
+	function mifuncion(){
+		try{
+			var numero1=50;
+
+			var numero2=50;
+
+			var resultado = (numero1 + numero2)/numero3;
+		}catch(error){
+			alert("mensaje error" + " - " + error.message);
+		}
+	}
+
+	function mifuncion2(){
+		try{
+			var n=Math.sqrt(-40);
+			
+			if(isNaN()){
+				throw( "No es posible calcular una raíz negativa!!." );			
+			}
+		}catch(error){
+			alert(error);
+		}
+	}
+
+	function mifuncion3(){
+		try{
+			var estudiante = null;
+			alert(estudiante.nombre);
+		}catch(error){
+
+			alert("Existe un Error" + " - " + error.message);
+
+		}finally{
+			document.getElementById("mensaje").innerHTML="Estamos en la sentencia FINALLY!!";
+		}
+	}
+
+</script>
+</html>

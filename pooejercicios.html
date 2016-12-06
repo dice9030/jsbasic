@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>poo ejercicios</h1>
+	<p id="codigo"></p>
+	<p id="nombre"></p>
+	<p id="cantidad"></p>
+	<p id="precio"></p>
+
+	<p id="mensaje"></p>
+	<button onclick="miFuncion()">Ver datos</button>
+</body>
+<script>
+	
+function producto(codigo,nombre,cantidad,precio){
+	this.codigo=codigo;
+	this.nombre=nombre;
+	this.cantidad=cantidad;
+	this.precio=precio;
+
+	this.mostrar = function(){
+		document.getElementById("codigo").innerHTML=this.codigo;
+		document.getElementById("nombre").innerHTML=this.nombre;
+		document.getElementById("cantidad").innerHTML=this.cantidad;
+		document.getElementById("precio").innerHTML=this.precio;
+
+	};
+
+	this.datos = function(){
+		var mensaje = "";
+
+		mensaje += "Codigo: " + this.codigo +"<br>";
+		mensaje += "Nombre: " + this.nombre +"<br>";
+		mensaje += "Cantidad: " + this.cantidad +"<br>";
+		mensaje += "Precio: " + this.precio +"<br>";
+
+		document.getElementById("mensaje").innerHTML=mensaje;
+
+	}
+
+}
+
+var Producto = new producto("001","Cuaderno",30,12.50);
+
+function miFuncion(argument){
+	Producto.mostrar();
+
+	Producto.datos();
+}
+
+
+</script>
+
+</html>
