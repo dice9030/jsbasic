@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mi primer jsom</title>
+
+</head>
+<body>
+
+	<h1>Empresas</h1>
+	<p id="empresas"></p>
+</body>
+<script type="text/javascript">
+	var jsomtext= '{"empresas":['+
+
+					'{"nint":"3423-1","nombre":"TCC","telefono":"324432","email":"correo1@gmail.com"},'+
+					'{"nint":"3423-2","nombre":"Movistar","telefono":"2432432","email":"correo2@gmail.com"},'+
+					'{"nint":"3423-3","nombre":"Claro","telefono":"22131454","email":"correo3@gmail.com"},'+
+					'{"nint":"3423-4","nombre":"Entel","telefono":"4532342","email":"correo4@gmail.com"},'+
+					'{"nint":"3423-5","nombre":"Alcatel","telefono":"543343","email":"correo5@gmail.com"},'+
+					'{"nint":"3423-6","nombre":"Sony","telefono":"2342342","email":"correo6@gmail.com"}'
+
+					+']}';
+
+	var jsobj = JSON.parse(jsomtext);
+
+	function leerJSON(json){
+		var out="--------------Empresas--------------<br>";
+		var i;
+		for(i=0;i<json.empresas.length;i++){
+			out+= "Nit: "+json.empresas[i].nint+" - Nombre: "+json.empresas[i].nombre+" - Telefono: "+json.empresas[i].telefono+" - Email: "+json.empresas[i].email + "<br>";
+		}
+
+		document.getElementById("empresas").innerHTML=out;
+	}
+
+	leerJSON(jsobj);
+
+</script>
+</html>
