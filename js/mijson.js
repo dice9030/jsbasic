@@ -16,7 +16,7 @@ var mijson = [
 console.table(mijson);
 
 function leerjson(json){
-	console.log("out");
+
 	var out="";
 	var i;
 	for ( i = 0; i<json.length;i++) {
