@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html" charset="utf-8">
+	<title>Registro de Usuario</title>
+	<script type="text/javascript">
+		function evento_onload(){
+			alert("Bienvenido a nuestro formulario!!");
+		}
+		function evento_onclick(){
+			alert("Los datos han sido enviados");
+		}
+		function evento_onfocus(elemento){
+			elemento.style.background="#cccccc";
+		}
+
+		function evento_oncopy(){
+			alert("mensaje");
+		}
+	</script>
+</head>
+<body onload="evento_onload()">
+
+	<h4>Formulario de Registro de Usuarios</h4>
+
+	<table>
+		<form id="formulario">
+			<tr>
+				<td><label>Nombre:</label></td>
+				<td><input type="text" id="nombres" name="nombres" onfocus="evento_onfocus(this)"></td>
+			</tr>
+			<tr>
+				<td><label>Apellido:</label></td>
+				<td><input type="text" id="apellidos" name="apellidos" onfocus="evento_onfocus(this)"></td>
+			</tr>
+			<tr>
+				<td><label>Identificación:</label></td>
+				<td><input type="text" id="identificacion" name="identificacion" onfocus="evento_onfocus(this)"></td>
+			</tr>
+			<tr>
+				<td><label>Sexo:</label></td>
+				<td><select id="idsexo" onfocus="evento_onfocus(this)">
+						<option name="" value=""></option>
+						<option name="masculino" value="masculino">Masculino</option>
+						<option name="femenino" value="femenino">Femenino</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Email:</label></td>
+				<td><input type="text" id="email" name="email" onfocus="evento_onfocus(this)"></td>
+			</tr>
+			<tr>
+				<td><label>Teléfono:</label></td>
+				<td><input type="text" id="telefono" name="telefono" oncopy="evento_oncopy()"></td>
+			</tr>
+			<tr>
+				<td><label>Dierección:</label></td>
+				<td><input type="text" id="direccion" name="direccion" onfocus="evento_onfocus(this)"></td>
+			</tr>
+			<tr>
+				
+				<td><input onclick="evento_onclick()" type="submit" id="enviar" name="enviar" value="Enviar"></td>
+			</tr>
+		</form>
+	</table>
+
+</body>
+</html>

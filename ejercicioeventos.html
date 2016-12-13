@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="onload()">
+
+	<h1 style="text-align: center;">Hoja de vida</h1>
+
+	<form onreset="restablecer()">
+		<h2>Informe Personal</h2>
+		<label>Nombre:</label>
+		<input onchange="cambiarmayuscula(this)" id="n1" type="text" value=""></input><br>	
+		<label>Apellido:</label>
+		<input onchange="cambiarmayuscula(this)" id="n2" type="text" value=""></input><br>	
+		<label>Direccion:</label>
+		<input id="n3" type="text" value=""></input><br>	
+		<label>Edad:</label>
+		<input id="Edad" type="text" value=""></input><br>
+		<label>Fecha de Nacimiento:</label>
+		<input id="n4" type="date" value=""></input><br>
+		<label>Lugar de Nacimiento:</label>
+		<input id="n5" type="text" value=""></input><br>	
+		<label>Estado Civil:</label>
+		<input id="n6" type="text" value=""></input><br>	
+		<h2>Informe academico</h2>
+		<label>Universidad:</label>
+		<input id="n1" type="text" value=""></input><br>	
+		<label>Profesion:</label>
+		<input id="n2" type="text" value=""></input><br>	
+		<label>Observacion:</label>	
+		<textarea onselect="seleccion()">Observacion</textarea>
+		<input type="reset" name="Restablecer" name="Restablecer" />								
+		<input type="button" name="Enviar" value="Ennviar" onclick="enviar()" />								
+	</form>
+
+	<script type="text/javascript">
+		function onload(){
+			alert("Bienvenido a su formato de Hoja de Vida");
+		}
+
+		function enviar(){
+			alert("Su Hoja de Vida ha Sido Guardada Correctamente");
+		}
+		function seleccion(){
+			alert("Texto seleccionado");
+		}
+		function cambiarmayuscula(obj){
+			obj.value=obj.value.toUpperCase();
+
+		}
+
+		function restablecer(){
+			alert("Se ha restablecido el Texto");
+		}
+
+	</script>
+	
+</body>
+</html>

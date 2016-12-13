@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eventos</title>
+	<script type="text/javascript">
+		function letras(){
+			var x= document.getElementById("mayuscula");
+			x.value = x.value.toUpperCase();
+		}
+	</script>
+</head>
+<body>
+
+	<h1>Formularios y Eventos onchange() </h1>
+
+	Escriba su Direccion:
+	<input type="text" name="mayuscula" id="mayuscula" onchange="letras()">
+	<p>Las Letras se cambian a mayusculas cuando se termine de escribir en la caja de texto</p>
+</body>
+</html>
